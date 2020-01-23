@@ -30,12 +30,13 @@ namespace Mine.Services
         {
             datalist = new List<ItemModel>()
             {
-                new ItemModel { Name = "First item", Description="This is an item description." },
-                new ItemModel { Name = "Second item", Description="This is an item description." },
-                new ItemModel { Name = "Third item", Description="This is an item description." },
-                new ItemModel { Name = "Fourth item", Description="This is an item description." },
-                new ItemModel { Name = "Fifth item", Description="This is an item description." },
-                new ItemModel { Name = "Sixth item", Description="This is an item description." }
+                new ItemModel { Name = "Health Potion", Description="Restores 50% of Max Health.", Value = 50 },
+                new ItemModel { Name = "Energy Potion", Description="Fully restores Energy Points" , Value = 25},
+                new ItemModel { Name = "Treasure Chest", Description="Open to get a random amount of gold", Value = 250 },
+                new ItemModel { Name = "Iron Sword", Description="Crafted by an experienced blacksmith. [+20 ATK]" , Value = 100},
+                new ItemModel { Name = "Iron Shield", Description="Just might keep you from losing an arm. [+20 DEF]", Value = 50},
+                new ItemModel { Name = "Gold Necklace", Description="Could be fake. [+5 MATK]", Value = 500 }
+           
             };
 
             return true;

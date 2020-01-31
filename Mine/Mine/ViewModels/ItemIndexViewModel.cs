@@ -53,6 +53,12 @@ namespace Mine.ViewModels
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
+        public async Task<ItemModel> Read(string id)
+        {
+            var result = await DataStore.ReadAsync(id);
+            return result;
+        }
+
         public async Task<bool> Add(ItemModel data)
         {
             Dataset.Add(data);

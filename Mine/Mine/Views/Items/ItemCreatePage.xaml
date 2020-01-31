@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="Mine.Views.ItemCreatePage"
              
-             Title="{Binding Title}">
+             Title="Create">
     
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />

@@ -56,5 +56,9 @@ namespace Mine.Views
             ValueValue.Text = String.Format("{0}", e.NewValue);
 
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

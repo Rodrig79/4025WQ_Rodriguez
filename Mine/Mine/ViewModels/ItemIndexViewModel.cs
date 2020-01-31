@@ -46,6 +46,11 @@ namespace Mine.ViewModels
             {
                 await Add(data as ItemModel);
             });
+            // Register the Delete Message
+            MessagingCenter.Subscribe<ItemDeletePage, ItemModel>(this, "Delete", async (obj, data) =>
+            {
+                await Delete(data as ItemModel);
+            });
         }
 
         /// <summary>
@@ -67,6 +72,18 @@ namespace Mine.ViewModels
             return true;
         }
 
+        public async Task<bool> Delete(ItemModel data)
+        {
+            var record = await Read(data.Id);
+            if(record == null)
+            {
+                return false;
+            }
+            Dataset.Remove(data);
+            var result = await DataStore.DeleteAsync(data.Id);
+
+            return result;
+        }
         #region Refresh
         // Return True if a refresh is needed
         // It sets the refresh flag to false
